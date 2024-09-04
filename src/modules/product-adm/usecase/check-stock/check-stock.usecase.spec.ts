@@ -23,13 +23,13 @@ describe('CheckStock usecase unit test', () => {
     const checkStockUseCase = new CheckStockUseCase(productRepository);
 
     const input = {
-      productId: '1',
+      id: '1',
     };
 
     const result = await checkStockUseCase.execute(input);
 
     expect(productRepository.find).toHaveBeenCalled();
-    expect(result.productId).toBe('1');
+    expect(result.id).toBe('1');
     expect(result.stock).toBe(10);
   });
 });

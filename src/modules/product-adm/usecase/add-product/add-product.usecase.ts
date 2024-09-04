@@ -3,7 +3,7 @@ import Id from '../../../@shared/domain/value-object/id.value-object';
 import ProductGateway from '../../gateway/product.gateway';
 import Product from '../../domain/product.entity';
 
-export default class AddProductUseCase {
+export default class AddProductUsecase {
   private _productRepository: ProductGateway;
 
   constructor(productRepository: ProductGateway) {

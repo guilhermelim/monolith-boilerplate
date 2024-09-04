@@ -1,4 +1,4 @@
-import AddProductUseCase from './add-product.usecase';
+import AddProductUsecase from './add-product.usecase';
 
 const MockRepository = () => {
   return {
@@ -12,7 +12,7 @@ describe('Add Product usecase unit test', () => {
     // repositorio
     // usecase
     const productRepository = MockRepository();
-    const usecase = new AddProductUseCase(productRepository);
+    const usecase = new AddProductUsecase(productRepository);
 
     const input = {
       description: 'Product 1 description',
