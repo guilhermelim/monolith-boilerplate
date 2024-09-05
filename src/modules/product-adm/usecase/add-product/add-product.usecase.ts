@@ -25,7 +25,7 @@ export default class AddProductUsecase {
       purchasePrice: product.purchasePrice,
       description: product.description,
       createdAt: product.createdAt,
-      updatedAt: product.updateAt,
+      updatedAt: product.updatedAt,
       stock: product.stock,
       name: product.name,
       id: product.id.id,

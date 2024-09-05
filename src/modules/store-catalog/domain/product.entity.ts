@@ -5,8 +5,10 @@ import BaseEntity from '../../@shared/domain/entity/base.entity';
 interface ProductProps {
   description: string;
   salesPrice: number;
+  createdAt?: Date;
+  updatedAt?: Date;
   name: string;
-  id: Id;
+  id?: Id;
 }
 
 export default class Product extends BaseEntity implements AggregateRoot {
@@ -15,7 +17,7 @@ export default class Product extends BaseEntity implements AggregateRoot {
   private _name: string;
 
   constructor(props: ProductProps) {
-    super(props.id);
+    super(props.id, props.createdAt, props.updatedAt);
     this._name = props.name;
     this._description = props.description;
     this._salesPrice = props.salesPrice;
